@@ -2,7 +2,9 @@
 print('нужно создать максимум хейта, используя минимальное количество хейтеров.\
 используем для этого жадный алгоритм.\n')
 
-import copy
+import copy, sys
+
+file_to_save = input('введите имя файла, если вы хотите сохранить данные в файл,либо нажмите enter, чтобы видеть результат на экране\n')
 
 def inputdata(type_of_person):
     inputdata = []
@@ -47,7 +49,9 @@ def printopt(items_to_print):
     for item in items_to_print:
         print('    ', item)
 
-
+if file_to_save:
+    sys.stdout = open(file_to_save, 'w')
+    
 print('#'*50)
 print('вот полный список людей, которых хейтерят')
 printopt(who_is_hated_initial)
@@ -59,4 +63,7 @@ for key in haters:
 print('вот минимальный список хейтеров, хейтящих максимум людей')
 printopt(max_hate_by_minhaters)
 print('#'*50)
+
+sys.stdout.close()
+
 
