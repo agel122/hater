@@ -43,7 +43,20 @@ def maxcover_by_min_items(items_to_be_covered, items_to_choose):
 
 max_hate_by_minhaters = maxcover_by_min_items(who_is_hated, haters)
 
-print(f'вот полный список людей, которых хейтерях - {who_is_hated_initial}\n')
-print(f'вот полный список хейтеров с людьми, которых они хейтят - {haters}\n')
-print('вот минимальный список хейтеров, хейтящих максимум людей', max_hate_by_minhaters)
+def printopt(items_to_print):
+    for item in items_to_print:
+        print('    ', item)
+
+
+print('#'*50)
+print('вот полный список людей, которых хейтерят')
+printopt(who_is_hated_initial)
+print('вот полный список хейтеров и людей, которых они хейтят')
+for key in haters:
+    print('    ', key)
+    for value in haters[key]:
+        print('        ', value)
+print('вот минимальный список хейтеров, хейтящих максимум людей')
+printopt(max_hate_by_minhaters)
+print('#'*50)
 
