@@ -1,3 +1,6 @@
+#!/bin/python3
+import copy, sys
+
 def inputdata(type_of_person):
     inputdata = []
     print('ввевем список %s. если %s достаточно, нажмите q\n' % (type_of_person, type_of_person))
@@ -27,11 +30,7 @@ def printopt(items_to_print):
     for item in items_to_print:
         print('    ', item)
 
-
 if __name__ == '__main__':
-    #!/bin/python3
-    import copy, sys
-    
     print('нужно создать максимум хейта, используя минимальное количество хейтеров.\
 используем для этого жадный алгоритм.\n')
     
