@@ -1,0 +1,8 @@
+Greedy algorithm is used to choose minimum set of items,
+cover maximum set of another items.
+In particular case - haters and hated persons are considered.
+You can add haters and hated persons manually in menu.
+After - need to assign hated persons to haters,
+so, you need double-click on each hater and choose.
+After, you can calculate results and show it on the screen in text form.
+
